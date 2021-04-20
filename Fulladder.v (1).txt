@@ -1,0 +1,35 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    06:59:43 04/14/2021 
+// Design Name: 
+// Module Name:    full_adder 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module full_adder(
+A,B,C,SUM,CARRY
+    );
+	 input A,B,C;
+	 output SUM,CARRY;
+	 wire tem1,tem2,tem3;
+	 assign tem1=A^B;
+	 assign tem2=tem1&C;
+	 assign tem3=A&B;
+	 assign SUM=tem1^C;
+	 assign CARRY=tem2|tem3;
+	 
+
+
+endmodule

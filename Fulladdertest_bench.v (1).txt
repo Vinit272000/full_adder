@@ -1,0 +1,85 @@
+`timescale 1ns / 1ps
+
+////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer:
+//
+// Create Date:   07:27:07 04/14/2021
+// Design Name:   full_adder
+// Module Name:   /home/ise/Desktop/New Folder/fulladder/Full_Adder_testbench.v
+// Project Name:  fulladder
+// Target Device:  
+// Tool versions:  
+// Description: 
+//
+// Verilog Test Fixture created by ISE for module: full_adder
+//
+// Dependencies:
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+////////////////////////////////////////////////////////////////////////////////
+
+module Full_Adder_testbench;
+
+	// Inputs
+	reg A;
+	reg B;
+	reg C;
+
+	// Outputs
+	wire SUM;
+	wire CARRY;
+
+	// Instantiate the Unit Under Test (UUT)
+	full_adder uut (
+		.A(A), 
+		.B(B), 
+		.C(C), 
+		.SUM(SUM), 
+		.CARRY(CARRY)
+	);
+
+	initial begin
+		// Initialize Inputs
+		A = 0;
+		B = 0;
+		C = 0;
+		#10;
+		A = 0;
+		B = 0;
+		C = 0;
+		#10;
+		A = 0;
+		B = 0;
+		C = 1;
+		#10;
+		A = 0;
+		B = 1;
+		C = 0;
+		#10;
+		A = 0;
+		B = 1;
+		C = 1;
+		#10;
+		A = 1;
+		B = 0;
+		C = 0;
+		#10;
+		A = 1;
+		B = 0;
+		C = 1;
+		#10;
+	
+
+		// Wait 100 ns for global reset to finish
+		#100;
+        
+		// Add stimulus here
+
+	end
+      
+endmodule
+
